@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Survival Game</title>
+    <title>Unity WebGL Player | MetalSlug</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <!-- <script src="./Bridge.js"></script> -->
+<script src="./BridgeStark.js"></script>
 
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=600 height=900 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -19,10 +19,10 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="unity-footer", style="display: none;">
+      <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Survival Game</div>
+        <div id="unity-build-title">MetalSlug</div>
       </div>
     </div>
 
@@ -60,15 +60,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Survival_WebGL_Build.loader.js";
+      var loaderUrl = buildUrl + "/Web_GL_Metal_Slug.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Survival_WebGL_Build.data",
-        frameworkUrl: buildUrl + "/Survival_WebGL_Build.framework.js",
-        codeUrl: buildUrl + "/Survival_WebGL_Build.wasm",
+        dataUrl: buildUrl + "/Web_GL_Metal_Slug.data",
+        frameworkUrl: buildUrl + "/Web_GL_Metal_Slug.framework.js",
+        codeUrl: buildUrl + "/Web_GL_Metal_Slug.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Defaut Company",
-        productName: "Survival Game",
-        productVersion: "0.5",
+        companyName: "DefaultCompany",
+        productName: "MetalSlug",
+        productVersion: "4.0",
         showBanner: unityShowBanner,
       };
 
@@ -106,8 +106,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "600px";
-        canvas.style.height = "900px";
+        canvas.style.width = "1920px";
+        canvas.style.height = "1080px";
       }
 
       loadingBar.style.display = "block";
@@ -129,43 +129,6 @@
 
       document.body.appendChild(script);
 
-    </script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        #unity-container {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        canvas {
-            display: block;
-            /* width: 100vw;
-            height: 100vh; */
-            object-fit: contain;
-            width: 100%;
-            height: 100%;
-            /* max-width: 420px;
-            max-height: 639px; */
-        }
-    </style>
-    <script>
-        // function resizeCanvas() {
-        //     var canvas = document.getElementById('unity-canvas');
-        //     canvas.style.width = window.innerWidth + "px";
-        //     canvas.style.height = window.innerHeight + "px";
-        // }
-        function resizeCanvas() {
-          const canvas = document.querySelector("#unity-canvas");
-          canvas.style.width = "100%";
-          canvas.style.height = "100%";
-        }
-        window.addEventListener('resize', resizeCanvas);
-        window.addEventListener('load', resizeCanvas);
     </script>
   </body>
 </html>
